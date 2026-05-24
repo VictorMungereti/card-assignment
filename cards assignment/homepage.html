@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mada:wght@200..900&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+     --bg:#eeeed9;
+     --navbar-bg: #ffffff;
+     --navbar-circle-color: #4523c2;
+     --nav-secondary-color:  #1a1919;
+     --radius-sm: 8px;
+     --radius-md:15px;
+     --radius-lg:50px;
+     --nav-text-primary: #808080;
+     --border: 1px solid #0f0f0f;
+     --border-secondary:1px solid #b1b1b1;
+     --btn-color:  #1E6CE2;
+     --secondary-color: #3C364E;
+     --tertiary-color: #000000;
+     --fourth-color: #818181;
+     --star-color:  #f89b21;
+     --fifth-color: #4e4e4e;
+     --footer-color: #edffed;
+     --line-color: #a1a1a1;
+     --footware-color::#141007;
+
+     
+
+
+
+
+
+    }
+    
+/* navbar section styling */
+     *, *::before, *::after 
+    { 
+        box-sizing: border-box;
+        margin: 0; 
+        padding: 0; 
+    }
+body{
+  background-color: var(--bg);
+    }
+
+.navbar{
+    background-color:var(--navbar-bg);
+    padding: 0px 100px;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: left;
+    padding: 5px 30px;
+}
+
+.circle{
+    width: 10px;
+    height: 10px;
+    background-color: var(--navbar-circle-color);
+    border-radius: var(--radius-lg);
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h2{
+    font-size: 28px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    font-family: "Manrope" , sans-serif;
+
+}
+.nav-links ul{
+    list-style: none;
+}
+.nav-links ul li{
+    display: inline-block;
+    margin-right: 25px;
+    
+}
+
+.nav-links ul li a{
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--nav-text-primary);
+    font-family: "Manrope" , sans-serif;
+}
+.nav-links ul li a:hover{
+    color: var(--navbar-circle-color);
+}
+
+.search{
+    display: flex;
+    position: relative;
+}
+.search input{
+    padding: 12px 48px;
+    border-radius: 7px;
+    border: var(--border);
+    outline: none;
+    font-family: "Manrope" , sans-serif;
+}
+.search i {
+    height: 200px;
+    width: 10px;
+    position: absolute;
+    top: 32%;
+    right: 15px;
+    transform: translate(-90%);
+    cursor: pointer;
+    color: var(--nav-secondary-color);
+
+}
+.notifications {
+   margin-right: -10px;
+}
+.notifications .heart-btn, .shopping-cart, .profile-settings{
+   background: none;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   margin-right: 10px;
+}
+/* hero section styling */
+
+.hero-section{
+background: linear-gradient(90deg, #141D30 57.78%, #202646 114.36%);
+padding: 0px 100px;
+}
+.hero-container{
+    align-items: left;
+    padding: 5px 30px;
+    
+}
+.sub-title{
+    margin-top: 100px;
+    color: var(--bg);
+}
+.sub-title h3{
+    font-weight: 300;
+    font-size: 20px;
+    font-family: "Mada" , sans-serif;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+}
+.main-title{
+    margin-top: 10px;
+    color: var(--bg);
+}
+.main-title h1{
+    font-family: "Mada" , sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 95px;
+}
+.tagline{
+    margin-top: -5px;
+    color: var(--bg); 
+}
+
+.tagline p {
+font-family: 'Mada';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 29px;
+}
+.action-btns{
+    margin-top: 50px;
+    margin-bottom: 65px;
+    display: flex;
+    gap: 30px;
+}
+.action-btns .main-btn{
+    padding: 14px 30px;
+    border-radius:var(--radius-sm);
+    background-color: var(--btn-color);
+    color: var(--bg);
+    border:none;
+    outline: none;
+    font-family: "Manrope" , sans-serif;
+    }
+.action-btns .secondary-btn{
+    padding: 14px 30px;
+    border-radius:var(--radius-sm);
+    background-color:var(--secondary-color);
+    color:var(--bg);
+    border:none;
+    outline: none;
+    font-family: "Manrope" , sans-serif;
+}
+    /*footware selection section  */
+
+.footware{
+    padding: 10px 100px;
+
+}
+.footware-container{
+    align-items: left;
+    padding: 0px 30px;
+    position: relative;
+    padding-right: 30px;
+   
+}
+.footware-title{
+    font-family: "Manrope" , sans-serif;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 15px; 
+}
+
+.footware-selection-card img{
+    width: 250px;
+     border-radius:var(--radius-sm);
+}
+.footware-selection-card h3{
+    position: absolute;
+    bottom: 50px;
+    left: 45px;
+    font-family: "Mada" , sans-serif;
+    font-size: 400;
+    font-size: 18px;
+    color:var(--footware-color);
+}
+.shop-button{
+    position: relative;
+    flex-direction: row;
+}
+.shop-button h4{
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    color:var(--footware-color);
+}
+.shop-button i{
+    position: absolute;
+    bottom: 27px;
+    left: 53px;
+    color:var(--footware-color);
+}
+
+/* cards section */
+
+.product-cards{
+    padding: 10px 100px;
+    
+}
+.cards-container{
+    align-items: left;
+    padding: 0px 30px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 30px;
+    
+}
+
+.view-all-btn{
+    position: relative;
+    flex-direction: row;
+    padding-top: 50px;
+}
+.view-all-btn h4{
+    position: absolute;
+    right: 50px;
+    top: 18px;
+    color: var(--tertiary-color);
+    font-family: "Manrope" , sans-serif;
+    font-size: 14px;
+}
+.view-all-btn i{
+    position: absolute;
+    right: 30px;
+    top: 28px;
+    color: var(--tertiary-color);
+}
+.card{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border:var(--border-secondary);
+    border-radius:var(--radius-md);
+    cursor: pointer;
+    box-shadow: 0 5px 14px rgba(51,102,255,0.24);
+    transition: 0.2s ease;
+}
+.card:hover{
+    box-shadow: 0 5px 14px rgba(51,102,255,0.50);
+}
+.card img{
+    width: 100%;
+    height: 300px;
+    border-radius:var(--radius-md);
+    object-fit: cover;
+}
+.card-description{
+    margin-top: 10px;
+}
+.card-description span{
+    font-family: "Manrope" , sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color:var(--fourth-color);
+}
+.card-description h5{
+    font-family: "Manrope" , sans-serif;
+    padding-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color:var(--tertiary-color);
+
+}
+.card-description .card-star{
+    font-size: 12px;
+    color:var(--star-color);
+    padding-top: 3px;
+
+}
+.card-description h4{
+    padding-top: 5px;
+    font-family: "Manrope" , sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+}
+.card-description .add-cart{
+    margin-top: 10px;
+    margin-bottom: 7px;
+    padding: 14px 68px;
+    border-radius:var(--radius-sm);
+    background-color:var(--btn-color);
+    color:var(--bg);
+    border:none;
+    outline: none;
+    font-family: "Manrope" , sans-serif;
+}
+/* banner section */
+
+.banner-section{
+    padding: 10px 100px;
+    /* padding-right: 20px; */
+    background-color:var(--btn-color);
+   
+}
+.banner-container{
+    align-items: left;
+    padding: 5px 30px;
+    display: flex;
+    position: relative;
+    
+}
+.banner-info{
+    margin-top: 65px;
+    margin-bottom: 50px;  
+}
+.banner-info h4{
+    font-family: "Manrope" , sans-serif;
+    font-size: 18px;
+    color:var(--bg);
+    font-weight: 500;
+}
+.banner-info p{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-family: "Mada" , sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color:var(--bg);
+
+}
+.banner-btn{
+    position: absolute;
+    top: 65px;
+    right: 30px;
+    padding: 14px 45px;
+    font-size: 14px;
+    border-radius:var(--radius-sm);
+    outline: none;
+    border: none;
+    /* border: 1px solid #131212; */
+    box-shadow: 7px 7px 10px rgba(0,0,0,0.15), 7px 7px 10px rgba(0,0,0,0.15), 7px 7px 10px rgba(0,0,0,0.20);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.banner-btn:hover{
+    box-shadow: 7px 7px 10px rgba(0,0,0,0.15), 7px 7px 10px rgba(0,0,0,0.15), 7px 7px 10px rgba(0,0,0,0.45);
+}
+/* footer section styling */
+.footer-section{
+    padding: 10px 100px;
+    /* padding-right: 20px; */
+    background-color:var(--footer-color);
+}
+.footer-container{
+    align-items: left;
+    padding: 5px 30px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-right: 80px;
+    margin-top: 30px;
+    
+}
+.footer-logo p {
+    padding-top: 10px;
+    font-family: "Mada" , sans-serif;
+    color:var(--fifth-color);
+    line-height: 20px;
+}
+/* shop footer styling */
+.shop-footer{
+  padding-top: 10px;
+  margin-left: 20px;
+  
+  
+}
+.shop-footer h4{
+    font-family: "Mada" , sans-serif;
+    font-size: 18px;
+}
+.shop-footer ul{
+ list-style-type: none;
+ margin: none;
+ padding-top: 10px;
+ 
+}
+.shop-footer li{
+   padding-top: 10px;
+   color:var(--fifth-color);
+   margin-bottom: 10px;
+   
+}
+
+/* support -footer styling */
+
+.support-footer{
+  padding-top: 10px;
+  margin-left: 50px;
+  
+}
+.support-footer h4{
+    font-family: "Mada" , sans-serif;
+    font-size: 18px;
+}
+.support-footer ul{
+ list-style-type: none;
+ margin: none;
+ padding-top: 10px;
+}
+.support-footer li{
+   padding-top: 10px;
+   color:var(--fifth-color);
+   margin-bottom: 10px;
+}
+/* company support styling */
+.company-footer{
+  padding-top: 9.5px;
+  margin-left: 50px;
+  
+}
+.company-footer h4{
+    font-family: "Mada" , sans-serif;
+    font-size: 18px;
+}
+.company-footer ul{
+ list-style-type: none;
+ margin: none;
+ padding-top: 10px;
+}
+.company-footer li{
+   padding-top: 10px;
+   color:var(--fifth-color);
+   margin-bottom: 10px;
+}
+
+/* line styling */
+hr{
+    border: none;
+    height: 0.5px;
+    background-color:var(--line-color);
+    margin: 20px 30px;
+    
+}
+.copyright-section{
+    margin-top: 20px;
+    align-items: left;
+    padding: 5px 30px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.copyright h4{
+    color:var(--fifth-color);
+    font-family: "Mada" , sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+.privacy{
+    padding-left: 680px;
+    font-family: "Mada" , sans-serif;
+    font-size:15px ;
+    color:var(--fifth-color);
+}
+.terms{
+    font-family: "Mada" , sans-serif;
+    font-size:15px ;
+    color:var(--fifth-color);
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <div class=" nav-container">
+            <div class="logo">
+                <div class="circle"></div>
+                <h2>SHOPIFY</h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Collections</a></li>
+                    <li><a href="">Sale</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search products...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="notifications">
+                <button class="heart-btn">
+                    <i class="fa-regular fa-heart fa-lg"></i>
+                </button>
+                <button class="shopping-cart">
+                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                </button>
+                <button class="profile-settings">
+                    <i class="fa-solid fa-gear fa-lg"></i>
+                </button>    
+            </div>
+       
+        </div>
+    </div>
+  <!-- hero-section -->
+
+    <div class="hero-section">
+        <div class="hero-container">
+            <div class="sub-title">
+                <h3>NEW SEASON - 2026</h3>
+            </div>
+            <div class="main-title">
+                <h1>Crafted for the <br> Considered life.</h1>
+            </div>
+            <div class="tagline">
+                <p>Goods made with intention, built to last. Shop essentials that <br> earn their place in your routine</p>
+            </div>
+            <div class="action-btns">
+                <button class="main-btn">Shop now</button>
+                <button class="secondary-btn">View Collections</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- product selection section -->
+
+    <div class="footware">
+    <div class="footware-container">
+        <h2 class="footware-title">Shop by category</h2>
+        <div class="footware-selection-card">
+            <img src="images/shoes.jpg" alt="This is an image of a shoe">
+            <h3>Footware</h3>
+            <div class="shop-button">
+               <h4>Shop</h4>
+               <i class="fa-solid fa-arrow-right fa-sm"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- cards section -->
+
+    <div class="product-cards">
+        <div class="view-all-btn">
+               <h4>View all</h4>
+               <i class="fa-solid fa-arrow-right fa-sm"></i>
+            </div>
+        <div class="cards-container">
+             <!-- card 1 -->
+
+            <div class="card">
+                <img src="images/new balance.jpg" alt="This is an image of a new balance shoe">
+                <div class="card-description">
+                    <span>FOOTWARE</span>
+                    <h5>New Balance</h5>
+                    <div class="card-star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Ksh 3,000</h4>
+                    <button class="add-cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Add to cart</button>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+
+             <div class="card">
+                <img src="images/adidas.jpg" alt="This is an image of an adidas shoe">
+                <div class="card-description">
+                    <span>FOOTWARE</span>
+                    <h5>Adidas</h5>
+                    <div class="card-star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <h4>Ksh 2,500</h4>
+                    <button class="add-cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Add to cart</button>
+                </div>
+            </div>
+
+            <!-- card 3 -->
+
+             <div class="card">
+                <img src="images/nike.jpg" alt="This is an image of a nike shoe">
+                <div class="card-description">
+                    <span>FOOTWARE</span>
+                    <h5>Nike</h5>
+                    <div class="card-star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Ksh 3,000</h4>
+                    <button class="add-cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Add to cart</button>
+                </div>
+            </div>
+
+            <!-- card 4 -->
+
+             <div class="card">
+                <img src="images/vans.jpg" alt="This is an image of a vans shoe">
+                <div class="card-description">
+                    <span>FOOTWARE</span>
+                    <h5>Vans Old School</h5>
+                    <div class="card-star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Ksh 3,000</h4>
+                    <button class="add-cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner section -->
+
+    <div class="banner-section">
+        <div class="banner-container">
+            <div class="banner-info">
+                <h4>Free shipping on orders above Ksh 5,000</h4>
+                <p>Delivered in 2-3 business days,Kenya-wide.</p>
+            </div>
+            <button class="banner-btn">
+                Start Shopping
+            </button>
+        </div>
+    </div>
+
+    <!-- footer section -->
+     <div class="footer-section">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="logo">
+                <div class="circle"></div>
+                <h2>SHOPIFY</h1>
+            </div>
+            <p>Thoughtfully made goods for people who care about quality and <br>craft</p>
+            </div>
+            <!-- shop section footer -->
+            <div class="shop-footer">
+                <h4>Shop</h4>
+                <ul>
+                    <li>All products</li>
+                    <li>Collections</li>
+                    <li>Sales</li>
+                    <li>New Arrivals</li>
+                </ul>
+            </div>
+           <!-- support section footer -->
+            <div class="support-footer">
+                <h4>Support</h4>
+                <ul>
+                    <li>FAQ</li>
+                    <li>Shipping policy</li>
+                    <li>Returns</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <!-- company section footer -->
+            <div class="company-footer">
+                <h4>Company</h4>
+                <ul>
+                    <li>About</li>
+                    <li>Blog</li>
+                    <li>Careers</li>
+                    <li>Press</li>
+                </ul>
+            </div>
+            
+        <hr>    
+
+        </div>
+        <hr>
+        <div class="copyright-section">
+            <div class="copyright">
+                <h4>2026 Shopify Demo. All rights reserved</h4>
+            </div>
+            <div class="privacy">
+                <h4>Privacy</h4>
+            </div>
+            <div class="terms">
+                <h4>Terms</h4>
+            </div>
+        </div>
+     </div>
+
+     
+
+   
+
+   
+           
+              
+    
+</body>
+</html>
