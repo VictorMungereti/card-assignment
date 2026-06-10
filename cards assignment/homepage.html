@@ -311,6 +311,46 @@ font-family: 'Mada';
     border-radius:var(--radius-md);
     object-fit: cover;
 }
+/* discount and favorite buttons */
+
+.image-container{
+    position: relative;
+}
+
+.discount-badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background: #ff3b30;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+.favorite-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #444;
+    transition: 0.3s;
+}
+
 .card-description{
     margin-top: 10px;
 }
@@ -341,15 +381,16 @@ font-family: 'Mada';
     font-weight: 800;
 }
 .card-description .add-cart{
-    margin-top: 10px;
+    margin-top: 6px;
     margin-bottom: 7px;
-    padding: 14px 68px;
+    padding: 10px 20px;
     border-radius:var(--radius-sm);
     background-color:var(--btn-color);
     color:var(--bg);
     border:none;
     outline: none;
     font-family: "Manrope" , sans-serif;
+    width: 100%;
 }
 /* banner section */
 
@@ -611,7 +652,13 @@ hr{
              <!-- card 1 -->
 
             <div class="card">
-                <img src="images/new balance.jpg" alt="This is an image of a new balance shoe">
+                <div class="image-container">
+                 <img src="images/new balance.jpg" alt="This is an image of a new balance shoe">
+                   <div class="discount-badge">-6%</div>
+                       <button class="favorite-btn">
+                        <i class="fa-regular fa-heart" onclick="changeIcon(this)"></i>
+                        </button>
+                </div>
                 <div class="card-description">
                     <span>FOOTWARE</span>
                     <h5>New Balance</h5>
@@ -623,16 +670,23 @@ hr{
                         <i class="fa-solid fa-star"></i>
                     </div>
                     <h4>Ksh 3,000</h4>
-                    <button class="add-cart">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        Add to cart</button>
+                    <button class="add-cart" onclick="addToCart(this)">
+                   <i class="fa-solid fa-cart-shopping"></i>
+                      Add to cart
+                  </button>
                 </div>
             </div>
 
             <!-- card 2 -->
 
              <div class="card">
-                <img src="images/adidas.jpg" alt="This is an image of an adidas shoe">
+                <div class="image-container">
+                 <img src="images/adidas.jpg" alt="This is an image of a new balance shoe">
+                   <div class="discount-badge">-10%</div>
+                       <button class="favorite-btn">
+                        <i class="fa-regular fa-heart" onclick="changeIcon(this)"></i>
+                        </button>
+                </div>
                 <div class="card-description">
                     <span>FOOTWARE</span>
                     <h5>Adidas</h5>
@@ -644,16 +698,23 @@ hr{
                         <i class="fa-regular fa-star"></i>
                     </div>
                     <h4>Ksh 2,500</h4>
-                    <button class="add-cart">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        Add to cart</button>
+                    <button class="add-cart" onclick="addToCart(this)">
+                   <i class="fa-solid fa-cart-shopping"></i>
+                      Add to cart
+                  </button>
                 </div>
             </div>
 
             <!-- card 3 -->
 
              <div class="card">
-                <img src="images/nike.jpg" alt="This is an image of a nike shoe">
+                <div class="image-container">
+                 <img src="images/vans.jpg" alt="This is an image of a new balance shoe">
+                   <div class="discount-badge">-5%</div>
+                       <button class="favorite-btn">
+                        <i class="fa-regular fa-heart" onclick="changeIcon(this)"></i>
+                        </button>
+                </div>
                 <div class="card-description">
                     <span>FOOTWARE</span>
                     <h5>Nike</h5>
@@ -665,16 +726,23 @@ hr{
                         <i class="fa-solid fa-star"></i>
                     </div>
                     <h4>Ksh 3,000</h4>
-                    <button class="add-cart">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        Add to cart</button>
+                    <button class="add-cart" onclick="addToCart(this)">
+                   <i class="fa-solid fa-cart-shopping"></i>
+                      Add to cart
+                  </button>
                 </div>
             </div>
 
             <!-- card 4 -->
 
              <div class="card">
-                <img src="images/vans.jpg" alt="This is an image of a vans shoe">
+                <div class="image-container">
+                 <img src="images/nike.jpg" alt="This is an image of a new balance shoe">
+                   <div class="discount-badge">-6%</div>
+                       <button class="favorite-btn">
+                        <i class="fa-regular fa-heart" onclick="changeIcon(this)"></i>
+                        </button>
+                </div>
                 <div class="card-description">
                     <span>FOOTWARE</span>
                     <h5>Vans Old School</h5>
@@ -686,9 +754,10 @@ hr{
                         <i class="fa-solid fa-star"></i>
                     </div>
                     <h4>Ksh 3,000</h4>
-                    <button class="add-cart">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        Add to cart</button>
+                    <button class="add-cart" onclick="addToCart(this)">
+                   <i class="fa-solid fa-cart-shopping"></i>
+                      Add to cart
+                  </button>
                 </div>
             </div>
         </div>
@@ -765,6 +834,8 @@ hr{
             </div>
         </div>
      </div>
+
+      <script src="script.js"></script>
 
      
 
